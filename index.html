@@ -54,10 +54,29 @@ nav a:hover {
 /* ===== HERO ===== */
 
 .hero {
-    padding: 120px 8% 100px 8%;
-    max-width: 900px;
+    padding: 120px 8%;
 }
 
+.hero-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+}
 .hero h1 {
     font-size: 64px;
     margin-bottom: 10px;
@@ -191,17 +210,23 @@ footer {
 </nav>
 
 <div class="hero">
-    <div class="hero-content">
-        <h1>Bizcraft</h1>
-        <h3>by Deepak</h3>
-        <p>
-            Exploring business ideas, analyzing strategies,
-            and thinking through real-world execution.
-        </p>
-        <a href="#" class="cta-btn">Explore My Work</a>
+    <div class="hero-wrapper">
+
+        <div class="hero-content">
+            <h1>Bizcraft</h1>
+            <h3>by Deepak</h3>
+            <p>
+                Perspective is Strategy.
+            </p>
+            <a href="#" class="cta-btn">Explore My Work</a>
+        </div>
+
+        <div class="hero-image">
+            <img src="hero.jpg" alt="Perspective is Strategy lecture">
+        </div>
+
     </div>
 </div>
-
 <section>
     <div class="section-title">Featured Work</div>
     <div class="grid">
