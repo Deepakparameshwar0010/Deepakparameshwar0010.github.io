@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Marketing Case Study - Bizcraft</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f8f4;
+  color: #333;
+  line-height: 1.7;
+  padding: 4rem 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+a {
+  display: inline-block;
+  margin-top: 3rem;
+  text-decoration: none;
+  color: #6b5cff;
+  font-weight: bold;
+}
+
+</style>
+</head>
+<body>
+
+<h1>Case Study: Why Simplicity Wins in Marketing</h1>
+
+<p>
+Many brands try to impress with complexity. But the most powerful campaigns
+win because they communicate one clear idea.
+</p>
+
+<h2>The Core Strategy</h2>
+
+<p>
+The campaign focused on a single emotional trigger: trust.
+Instead of flooding customers with features, the brand highlighted one promise
+and repeated it across every platform.
+</p>
+
+<h2>Execution</h2>
+
+<p>
+• Same visual identity across ads<br>
+• Consistent tone of voice<br>
+• Clear, benefit-driven messaging<br>
+• Minimal distraction
+</p>
+
+<h2>Result</h2>
+
+<p>
+Conversion rates improved not because the offer changed,
+but because the message became focused.
+Clarity created confidence.
+Confidence created action.
+</p>
+
+<a href="index.html">← Back to Home</a>
+
+</body>
+</html>
