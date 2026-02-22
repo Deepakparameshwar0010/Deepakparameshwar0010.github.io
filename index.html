@@ -125,7 +125,6 @@ section:nth-of-type(even) {
         }
 
        .card {
-    background: white;
     padding: 30px;
     border-radius: 14px;
     transition: 0.3s ease;
@@ -133,6 +132,10 @@ section:nth-of-type(even) {
     box-shadow: 0 8px 20px rgba(0,0,0,0.04);
 }
 
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
 .card:hover {
     transform: translateY(-6px);
     box-shadow: 0 12px 30px rgba(0,0,0,0.08);
@@ -182,15 +185,15 @@ section:nth-of-type(even) {
 <section>
     <div class="section-title">Featured Work</div>
     <div class="grid">
-        <div class="card">
-            <h3>Marketing Case Study</h3>
+        <div class="card" style="background:#fdf6ec;">            
+<h3>Marketing Case Study</h3>
             <p>Deep dive into brand positioning and consumer psychology.</p>
         </div>
-        <div class="card">
+       <div class="card" style="background:#f5efe6;">
             <h3>Finance Breakdown</h3>
             <p>Understanding valuation logic and financial structure.</p>
         </div>
-        <div class="card">
+        <div class="card" style="background:#f3ede4;">
             <h3>Business Idea Analysis</h3>
             <p>From idea to execution roadmap.</p>
         </div>
