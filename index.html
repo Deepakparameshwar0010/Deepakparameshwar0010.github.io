@@ -126,13 +126,19 @@ section:nth-of-type(even) {
             gap: 30px;
         }
 
-        .card {
-            background: #111827;
-            padding: 25px;
-            border-radius: 10px;
-            transition: 0.3s;
-        }
+       .card {
+    background: rgba(255, 255, 255, 0.04);
+    padding: 30px;
+    border-radius: 14px;
+    transition: 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
 
+.card:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.07);
+}
         .card:hover {
             transform: translateY(-6px);
             background: #1f2937;
