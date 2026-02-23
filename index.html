@@ -70,7 +70,36 @@ nav ul li a {
 nav ul li a:hover {
   color: #6b5cff;
 }
+<section class="welcome-banner">
+  <p>Welcome to Bizcraft. Strategy starts with perspective.</p>
+</section>
+/* ===== WELCOME BANNER ===== */
 
+.welcome-banner {
+  background: #6b5cff;
+  color: white;
+  text-align: center;
+  padding: 0.8rem 1rem;
+  position: relative;
+  top: 70px;
+  animation: slideDown 1s ease forwards;
+}
+
+.welcome-banner p {
+  margin: 0;
+  font-weight: 500;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 /* ===== HERO ===== */
 
 .hero {
@@ -78,7 +107,7 @@ nav ul li a:hover {
   align-items: center;
   justify-content: center;
   gap: 5rem;
-  padding: 10rem 2rem 6rem 2rem;
+  padding: 12rem 2rem 6rem 2rem;
   max-width: 1200px;
   margin: auto;
 }
