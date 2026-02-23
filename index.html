@@ -209,6 +209,43 @@ nav ul li a:hover {
   color: #d1d5db;
   font-size: 1.1rem;
 }
+/* ===== INSIGHTS SECTION ===== */
+
+.insights {
+  padding: 6rem 2rem;
+  background: #f3efe8;
+  text-align: center;
+}
+
+.insights h2 {
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+}
+
+.insight-cards {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.insight-card {
+  flex: 1 1 300px;
+  padding: 2rem;
+  background: white;
+  border-radius: 16px;
+  text-decoration: none;
+  color: #333;
+  border: 1px solid rgba(0,0,0,0.06);
+  transition: all 0.3s ease;
+}
+
+.insight-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+}
 /* ===== ABOUT SECTION ===== */
 
 .about {
@@ -295,6 +332,28 @@ Strategic thinking across marketing, finance and business analysis — simplifie
     Strategy is not about tactics. It is about perspective.
     The ability to see markets, numbers and behavior from a higher vantage point.
   </p>
+</section>
+<section class="insights">
+  <h2>Latest Insights</h2>
+
+  <div class="insight-cards">
+
+    <a href="insight1.html" class="insight-card">
+      <h3>Why 90% of Online Businesses Fail</h3>
+      <p>A breakdown of positioning, differentiation and execution mistakes.</p>
+    </a>
+
+    <a href="insight2.html" class="insight-card">
+      <h3>The Psychology of Pricing</h3>
+      <p>How perception shapes value more than numbers do.</p>
+    </a>
+
+    <a href="insight3.html" class="insight-card">
+      <h3>Clarity vs Complexity in Strategy</h3>
+      <p>Why simplicity often outperforms intelligence.</p>
+    </a>
+
+  </div>
 </section>
 <section class="about">
   <h2>About Deepak</h2>
