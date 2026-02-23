@@ -71,24 +71,53 @@ nav ul li a:hover {
   color: #6b5cff;
 }
 
-/* ===== FLOATING WELCOME BANNER ===== */
+/* ===== CEO WELCOME EXPERIENCE ===== */
 
-.welcome-banner {
+.welcome-container {
   position: fixed;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #6b5cff;
-  color: white;
-  padding: 1rem 2rem;
-  border-radius: 30px;
-  font-weight: 500;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-  opacity: 0;
-  animation: welcomePopup 5s ease forwards;
+  bottom: 40px;
+  left: -300px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
   z-index: 999;
+  animation: containerSlide 6s ease forwards;
 }
 
+.ceo-image {
+  width: 120px;
+  animation: ceoAppear 6s ease forwards;
+}
+
+.welcome-card {
+  background: white;
+  padding: 1.2rem 1.8rem;
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+  font-weight: 500;
+  opacity: 0;
+  animation: cardFade 6s ease forwards;
+}
+
+@keyframes containerSlide {
+  0% { left: -300px; }
+  15% { left: 40px; }
+  80% { left: 40px; }
+  100% { left: -300px; }
+}
+
+@keyframes ceoAppear {
+  0% { opacity: 0; }
+  15% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes cardFade {
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}
 @keyframes welcomePopup {
   0% {
     opacity: 0;
@@ -367,9 +396,13 @@ nav ul li a:hover {
     </ul>
    </div>
 </nav>
-<section class="welcome-banner">
-  <p>Welcome to Bizcraft. Strategy starts with perspective.</p>
-</section>
+<div class="welcome-container">
+  <img src="ceo.png" class="ceo-image">
+  <div class="welcome-card">
+    Welcome to Bizcraft.<br>
+    Strategy starts with perspective.
+  </div>
+</div>
   <section class="hero">
     <div class="hero-content">
       <h1>Bizcraft</h1>
