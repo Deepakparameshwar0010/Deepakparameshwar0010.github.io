@@ -268,23 +268,22 @@ nav ul li a:hover {
 /* ===== FADE IN ANIMATION ===== */
 
 @keyframes fadeUp {
-  from {
+  0% {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(80px);
   }
-  to {
+  100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
-
 .hero,
 .featured,
 .insights,
 .philosophy,
 .about {
   opacity: 0;
-  animation: fadeUp 1s ease forwards;
+  animation: fadeUp 2s ease forwards;
 }
 
 .featured { animation-delay: 0.3s; }
