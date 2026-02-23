@@ -369,6 +369,45 @@ nav ul li a:hover {
 .insights { animation-delay: 0.6s; }
 .philosophy { animation-delay: 0.9s; }
 .about { animation-delay: 1.2s; }
+/* ===== CONTACT SECTION ===== */
+
+.contact {
+  padding: 6rem 2rem;
+  background: #1f2933;
+  color: white;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.contact-sub {
+  color: #d1d5db;
+  margin-bottom: 3rem;
+  font-size: 1.1rem;
+}
+
+.contact-box {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  background: rgba(255,255,255,0.05);
+  padding: 2rem 3rem;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  min-width: 250px;
+}
+
+.contact-item:hover {
+  transform: translateY(-10px);
+  background: rgba(255,255,255,0.1);
+}
 /* ===== RESPONSIVE ===== */
 
 @media (max-width: 900px) {
@@ -472,6 +511,24 @@ Strategic thinking across marketing, finance and business analysis — simplifie
     Bizcraft is my platform to analyze ideas, break down strategies and sharpen
     my thinking through practical insights.
   </p>
+</section>
+<section class="contact">
+  <h2>Let’s Connect</h2>
+  <p class="contact-sub">
+    Open to discussions on marketing, finance, strategy and business ideas.
+  </p>
+
+  <div class="contact-box">
+    <div class="contact-item">
+      <h3>Email</h3>
+      <p>deepakparameshwar495@gmail.com</p>
+    </div>
+
+    <div class="contact-item">
+      <h3>LinkedIn</h3>
+      <p>linkedin.com/in/yourprofile</p>
+    </div>
+  </div>
 </section>
 </body>
 </html>
