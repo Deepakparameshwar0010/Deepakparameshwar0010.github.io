@@ -71,18 +71,41 @@ nav ul li a:hover {
   color: #6b5cff;
 }
 
-/* ===== WELCOME BANNER ===== */
+/* ===== FLOATING WELCOME BANNER ===== */
 
 .welcome-banner {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   background: #6b5cff;
   color: white;
-  text-align: center;
-  padding: 0.8rem 1rem;
-  position: relative;
-  top: 70px;
-  animation: slideDown 1s ease forwards;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  font-weight: 500;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  opacity: 0;
+  animation: welcomePopup 5s ease forwards;
+  z-index: 999;
 }
 
+@keyframes welcomePopup {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -30px);
+  }
+  10% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -20px);
+  }
+}
 .welcome-banner p {
   margin: 0;
   font-weight: 500;
@@ -105,7 +128,7 @@ nav ul li a:hover {
   align-items: center;
   justify-content: center;
   gap: 5rem;
-  padding: 12rem 2rem 6rem 2rem;
+  padding: 10rem 2rem 6rem 2rem;
   max-width: 1200px;
   margin: auto;
 }
