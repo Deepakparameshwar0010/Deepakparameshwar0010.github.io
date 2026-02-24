@@ -11,7 +11,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #f9f8f4;
+  background: linear-gradient(135deg, #f9f8f4 0%, #eef1f7 100%);
   color: #333;
   line-height: 1.6;
 }
@@ -167,7 +167,7 @@ nav ul li a:hover {
 }
 
 .hero h1 {
-  font-size: 3.5rem;
+  font-size: 4 rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
@@ -287,6 +287,27 @@ nav ul li a:hover {
   margin: auto;
   color: #d1d5db;
   font-size: 1.1rem;
+}
+/* ===== STRATEGIC NOTES ===== */
+
+.notes {
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.notes h2 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.note-box {
+  background: white;
+  max-width: 700px;
+  margin: 1.5rem auto;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  text-align: left;
 }
 /* ===== INSIGHTS SECTION ===== */
 
@@ -500,7 +521,7 @@ nav ul li a:hover {
       <h2>by Deepak</h2>
       <p class="quote">"Perspective is Strategy."</p>
 <p class="positioning">
-Strategic thinking across marketing, finance and business analysis — simplified.
+I deconstruct business ideas, pressure-test strategies, and rebuild them with clarity.
 </p>
       <a href="#work" class="cta">Explore Insights</a>
     </div>
@@ -533,6 +554,19 @@ Strategic thinking across marketing, finance and business analysis — simplifie
     Strategy is not about tactics. It is about perspective.
     The ability to see markets, numbers and behavior from a higher vantage point.
   </p>
+</section>
+<section class="notes">
+  <h2>Strategic Notes</h2>
+
+  <div class="note-box">
+    <p><strong>Observation:</strong> Most startups fail because they scale positioning errors.</p>
+    <p><strong>Insight:</strong> Clarity compounds. Confusion scales.</p>
+  </div>
+
+  <div class="note-box">
+    <p><strong>Observation:</strong> Differentiation is rarely about product. It is about perception.</p>
+    <p><strong>Insight:</strong> Markets reward clarity before they reward intelligence.</p>
+  </div>
 </section>
 <section class="insights">
   <h2>Latest Insights</h2>
@@ -649,6 +683,5 @@ function generateAnalysis() {
 
   document.getElementById("analysisResult").innerHTML = result;
 }
-</script>
-</body>
+</script>D</body>
 </html>
