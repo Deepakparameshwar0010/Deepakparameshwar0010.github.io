@@ -408,6 +408,58 @@ nav ul li a:hover {
   transform: translateY(-10px);
   background: rgba(255,255,255,0.1);
 }
+/* ===== STRATEGY LAB ===== */
+
+.strategy-lab {
+  padding: 6rem 2rem;
+  background: #f3efe8;
+  text-align: center;
+}
+
+.strategy-lab h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.lab-box {
+  margin-top: 2rem;
+}
+
+.lab-box input {
+  padding: 1rem;
+  width: 60%;
+  max-width: 500px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.lab-box button {
+  padding: 1rem 1.5rem;
+  margin-left: 1rem;
+  background: #6b5cff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.lab-box button:hover {
+  background: #4f3fe0;
+}
+
+.analysis-result {
+  margin-top: 3rem;
+  text-align: left;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
 /* ===== RESPONSIVE ===== */
 
 @media (max-width: 900px) {
@@ -503,7 +555,18 @@ Strategic thinking across marketing, finance and business analysis — simplifie
     </a>
 
   </div>
+</section><section class="strategy-lab" id="strategy">
+  <h2>💡 Break This Business</h2>
+  <p>Enter a business idea and test its strategic strength.</p>
+
+  <div class="lab-box">
+    <input type="text" id="businessInput" placeholder="Example: Selling AI courses to college students">
+    <button onclick="analyzeBusiness()">Analyze</button>
+  </div>
+
+  <div id="analysisResult" class="analysis-result"></div>
 </section>
+
 <section class="about">
   <h2>About Deepak</h2>
   <p>
@@ -530,5 +593,28 @@ Strategic thinking across marketing, finance and business analysis — simplifie
     </div>
   </div>
 </section>
+<script>
+function analyzeBusiness() {
+  const idea = document.getElementById("businessInput").value;
+
+  if (idea.trim() === "") {
+    alert("Enter a business idea first.");
+    return;
+  }
+
+  const result = `
+    <h3>Strategy Breakdown for: "${idea}"</h3>
+    <p><strong>1. Target Segment:</strong> Who specifically is this for? Be extremely narrow.</p>
+    <p><strong>2. Core Pain:</strong> What urgent problem does this solve?</p>
+    <p><strong>3. Differentiation:</strong> Why should someone choose this over alternatives?</p>
+    <p><strong>4. Substitutes:</strong> What else can customers use instead?</p>
+    <p><strong>5. Defensibility:</strong> What makes this hard to copy?</p>
+    <hr>
+    <p><em>Now write your own analysis below these questions.</em></p>
+  `;
+
+  document.getElementById("analysisResult").innerHTML = result;
+}
+</script>
 </body>
 </html>
