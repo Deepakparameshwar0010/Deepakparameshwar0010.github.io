@@ -595,22 +595,64 @@ Strategic thinking across marketing, finance and business analysis — simplifie
 </section>
 <script>
 function analyzeBusiness() {
-  const idea = document.getElementById("businessInput").value;
+  const idea = document.getElementById("businessInput").value.toLowerCase();
 
   if (idea.trim() === "") {
     alert("Enter a business idea first.");
     return;
   }
 
+  let target = "General audience. Needs narrowing.";
+  let pain = "Unclear urgent pain.";
+  let differentiation = "Weak differentiation.";
+  let substitutes = "Many substitutes exist.";
+  let defensibility = "Easy to copy.";
+  let score = 40;
+
+  // Basic logic simulation
+
+  if (idea.includes("college") || idea.includes("student")) {
+    target = "College students in a specific campus location.";
+    score += 10;
+  }
+
+  if (idea.includes("instant") || idea.includes("quick") || idea.includes("fast")) {
+    pain = "Solves immediate convenience need.";
+    score += 10;
+  }
+
+  if (idea.includes("unique") || idea.includes("only") || idea.includes("exclusive")) {
+    differentiation = "Strong positioning claim.";
+    score += 15;
+  }
+
+  if (idea.includes("easily") || idea.includes("copy")) {
+    defensibility = "Low. Business is easily replicable.";
+    score -= 10;
+  }
+
+  if (idea.includes("available") || idea.includes("near")) {
+    differentiation = "Location-based convenience advantage.";
+    score += 5;
+  }
+
+  let strengthLevel = "Weak";
+
+  if (score > 70) strengthLevel = "Strong";
+  else if (score > 55) strengthLevel = "Moderate";
+
   const result = `
-    <h3>Strategy Breakdown for: "${idea}"</h3>
-    <p><strong>1. Target Segment:</strong> Who specifically is this for? Be extremely narrow.</p>
-    <p><strong>2. Core Pain:</strong> What urgent problem does this solve?</p>
-    <p><strong>3. Differentiation:</strong> Why should someone choose this over alternatives?</p>
-    <p><strong>4. Substitutes:</strong> What else can customers use instead?</p>
-    <p><strong>5. Defensibility:</strong> What makes this hard to copy?</p>
+    <h3>Strategy Analysis</h3>
+    <p><strong>Target Segment:</strong> ${target}</p>
+    <p><strong>Core Pain:</strong> ${pain}</p>
+    <p><strong>Differentiation:</strong> ${differentiation}</p>
+    <p><strong>Substitutes:</strong> Local competitors, online alternatives, DIY options.</p>
+    <p><strong>Defensibility:</strong> ${defensibility}</p>
     <hr>
-    <p><em>Now write your own analysis below these questions.</em></p>
+    <p><strong>Strategic Strength Score:</strong> ${score}/100</p>
+    <p><strong>Overall Assessment:</strong> ${strengthLevel}</p>
+    <hr>
+    <p><em>Improve by narrowing audience, increasing uniqueness, and building barriers to entry.</em></p>
   `;
 
   document.getElementById("analysisResult").innerHTML = result;
