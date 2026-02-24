@@ -28,12 +28,6 @@ a {
 
 /* ===== HERO ===== */
 
-.hero {
-  text-align: center;
-  padding: 10rem 2rem 6rem 2rem;
-  max-width: 800px;
-  margin: auto;
-}
 
 .hero h1 {
   font-size: 4rem;
@@ -61,13 +55,54 @@ a {
   color: #666;
   margin-bottom: 2.5rem;
 }
+/* ===== GEOMETRIC HERO ===== */
 
-.hero-divider {
-  width: 60px;
-  height: 2px;
-  background: #6b5cff;
-  margin: 2.5rem auto;
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1100px;
+  margin: auto;
+  padding: 10rem 2rem 8rem 2rem;
+  align-items: center;
+  gap: 4rem;
 }
+
+.hero-left {
+  text-align: right;
+  padding-right: 3rem;
+  border-right: 1px solid rgba(0,0,0,0.1);
+}
+
+.hero-right {
+  padding-left: 3rem;
+}
+
+.hero-left h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.hero-left h2 {
+  font-size: 1rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #888;
+}
+
+.hero-right .quote {
+  font-size: 1.4rem;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  color: #444;
+}
+
+.hero-right .positioning {
+  font-size: 1.05rem;
+  color: #666;
+  max-width: 420px;
+}
+
 .hero-content {
   flex: 1;
 }
@@ -193,33 +228,41 @@ a {
 }
 @media (max-width: 900px) {
   .hero {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     text-align: center;
   }
 
-  .hero img {
-    margin-top: 2rem;
+  .hero-left {
+    border-right: none;
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .hero-right {
+    padding-left: 0;
   }
 }
-
 </style>
 </head>
 
 <body>
-
 <section class="hero">
-  <h1>Bizcraft</h1>
-  <h2>By Deepak</h2>
 
-  <div class="hero-divider"></div>
+  <div class="hero-left">
+    <h1>Bizcraft</h1>
+    <h2>By Deepak</h2>
+  </div>
 
-  <p class="quote">“Perspective is Strategy.”</p>
+  <div class="hero-right">
+    <p class="quote">“Perspective is Strategy.”</p>
+    <p class="positioning">
+      I deconstruct business ideas, pressure-test strategies,
+      and rebuild them with clarity.
+    </p>
+  </div>
 
-  <p class="positioning">
-    I deconstruct business ideas, pressure-test strategies,
-    and rebuild them with clarity.
-  </p>
 </section>
+
 <section class="profile-section">
   <img src="deepak.jpeg" alt="Deepak - Bizcraft" class="profile-photo">
 
