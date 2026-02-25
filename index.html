@@ -113,7 +113,7 @@ a {
   grid-template-columns: 1fr 1fr;
   max-width: 1100px;
   margin: auto;
-  padding: 14rem 2rem 8rem 2rem;
+  padding: 9rem 2rem 5rem 2rem;
   align-items: center;
   gap: 4rem;
 }
@@ -211,7 +211,7 @@ a {
   display: grid;
   grid-template-columns: 1fr 2fr;
   max-width: 1000px;
-  margin: 6rem auto;
+  margin: 4rem auto;
   padding: 0 2rem;
   gap: 4rem;
   align-items: center;
@@ -237,14 +237,13 @@ a {
 /* ===== NETWORK GATEWAY ===== */
 
 .network {
-  max-width: 900px;
-  margin: 4rem auto 6rem auto;
+  max-width: 1100px;
+  margin: 4rem auto;
   padding: 0 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
 }
-
 .node {
   padding: 1.8rem 2rem;
   border-radius: 14px;
@@ -252,6 +251,10 @@ a {
   border-left: 4px solid transparent;
   transition: all 0.3s ease;
   box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+min-height: 200px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
 }
 
 .node:hover {
@@ -395,6 +398,9 @@ body.dark .theme-toggle {
   }
 
 }
+.network {
+  grid-template-columns: 1fr;
+}
 
 </style>
 </head>
@@ -402,13 +408,6 @@ body.dark .theme-toggle {
 <header class="navbar">
   <div class="nav-logo">Bizcraft</div>
   <nav>
-<nav>
-  <a href="#hero">Home</a>
-  <a href="#decon">Deconstructions</a>
-  <a href="#notes">Notes</a>
-  <a href="#connect">Connect</a>
-  <button id="themeToggle" class="theme-toggle">🌙</button>
-</nav>
     <a href="#hero">Home</a>
 <a href="#decon">Deconstructions</a>
 <a href="#notes">Notes</a>
@@ -427,6 +426,15 @@ body.dark .theme-toggle {
       I deconstruct business ideas, pressure-test strategies,
       and rebuild them with clarity.
     </p>
+<p class="hero-meta">
+  Strategy • Incentives • Structural Advantage
+</p>
+.hero-meta {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  color: #777;
+}
   </div>
 
 </section>
