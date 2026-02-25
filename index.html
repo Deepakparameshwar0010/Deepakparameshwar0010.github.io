@@ -6,6 +6,40 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
+/* ===== NAVBAR ===== */
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(12px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 3rem;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  z-index: 1000;
+}
+
+.nav-logo {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.navbar nav a {
+  margin-left: 2rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: #555;
+  transition: all 0.3s ease;
+}
+
+.navbar nav a:hover {
+  color: #6b5cff;
+}
 
 /* ===== BASE ===== */
 
@@ -62,7 +96,7 @@ a {
   grid-template-columns: 1fr 1fr;
   max-width: 1100px;
   margin: auto;
-  padding: 10rem 2rem 8rem 2rem;
+  padding: 14rem 2rem 8rem 2rem;
   align-items: center;
   gap: 4rem;
 }
@@ -230,6 +264,40 @@ a {
   font-weight: 600;
   font-size: 0.9rem;
 }
+/* ===== CTA SECTION ===== */
+
+.cta-section {
+  text-align: center;
+  padding: 6rem 2rem;
+  background: #111;
+  color: white;
+}
+
+.cta-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cta-section p {
+  color: #bbb;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  padding: 0.9rem 2rem;
+  background: #6b5cff;
+  border: none;
+  color: white;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #4f3fe0;
+}
 @media (max-width: 900px) {
 
   .hero {
@@ -262,6 +330,15 @@ a {
 </head>
 
 <body>
+<header class="navbar">
+  <div class="nav-logo">Bizcraft</div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Deconstructions</a>
+    <a href="#">Notes</a>
+    <a href="#">Connect</a>
+  </nav>
+</header>
 <section class="hero">
 
   <div class="hero-left">
@@ -316,6 +393,11 @@ a {
     <p>Email: deepakparameshwar495@gmail.com</p>
   </div>
 
+</section>
+<section class="cta-section">
+  <h2>Build Clarity. Build Leverage.</h2>
+  <p>Subscribe to receive structured breakdowns and strategic insights.</p>
+  <button class="cta-button">Subscribe</button>
 </section>
 </body>
 </html>
